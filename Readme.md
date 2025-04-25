@@ -1,4 +1,4 @@
-**Стек технологий**
+# Стек технологий
 
 Flask
 
@@ -12,7 +12,7 @@ Flasgger – Swagger-документация
 
 SQLite – БД по умолчанию
 
-**Архитектура**
+# Архитектура
 
 controllers/         # HTTP маршруты (Blueprint)
 
@@ -26,7 +26,7 @@ app.py               # Точка входа
 
 config.py            # Настройки
 
-**Авторизация**
+# Авторизация
 
 При входе возвращается JWT access token
 
@@ -38,7 +38,7 @@ Authorization: Bearer <токен>
 
 Токены можно использовать для защиты маршрутов с @jwt_required()
 
-**Установка**
+# Установка
 
 git clone https://github.com/torarchi/flask-app
 
@@ -58,28 +58,27 @@ cp .env.example .env
 python app.py
 
 
-**env**
+# env
 
-# Flask секрет (обязателен для безопасности, свой придумываем)
+**Flask секрет (обязателен для безопасности, свой придумываем)**
 
 SECRET_KEY=your-secret-key
 
-# JWT-токены (подпись токенов тоже свой придумываем)
+**JWT-токены (подпись токенов тоже свой придумываем)**
 
 JWT_SECRET_KEY=your-jwt-secret-key
 
-# Подключение к БД:
-
-# SQLite (локально, по умолчанию sqlite)
+**Подключение к БД:**
+**SQLite (локально, по умолчанию sqlite)**
 
 DATABASE_URL=sqlite:///app.db
 
-# или MySQL (пример на будущее):
+**или MySQL (пример на будущее):**
 
-# DATABASE_URL=mysql+pymysql://root:password@localhost/mydb
+DATABASE_URL=mysql+pymysql://root:password@localhost/mydb
 
 
-**Swagger UI**
+# Swagger UI
 
 Доступен по адресу:
 
@@ -87,7 +86,7 @@ http://localhost:5000/apidocs
 
 
 
-**Как писать код**
+# Как писать код
 
 Контроллер — только получает запрос и вызывает сервис
 
