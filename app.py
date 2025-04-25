@@ -2,9 +2,13 @@ from flask import Flask
 from config import Config
 from extensions import db, bcrypt, jwt
 from flasgger import Swagger
+from flask_cors import CORS
 
 def create_app():
     app = Flask(__name__)
+    
+    CORS(app, origins=[r"http://localhost:\d+", r"http://127.0.0.1:\d+"], supports_credentials=True)
+    
     app.config.from_object(Config)
 
     db.init_app(app)
