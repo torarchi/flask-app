@@ -1,17 +1,14 @@
-Стек технологий
+**Стек технологий**
+
 Flask
-
 Flask-SQLAlchemy – ORM
-
 Flask-Bcrypt – хеширование паролей
-
 Flask-JWT-Extended – авторизация по токену
-
 Flasgger – Swagger-документация
-
 SQLite – БД по умолчанию
 
-Архитектура
+**Архитектура**
+
 bash
 Copy
 Edit
@@ -22,7 +19,8 @@ extensions.py        # Инициализация расширений
 app.py               # Точка входа
 config.py            # Настройки
 
-Авторизация
+**Авторизация**
+
 При входе возвращается JWT access token
 Токен создаётся по user.id
 Токен используется в заголовке:
@@ -30,7 +28,8 @@ config.py            # Настройки
 Authorization: Bearer <токен>
 Токены можно использовать для защиты маршрутов с @jwt_required()
 
-Установка
+**Установка**
+
 bash
 Copy
 Edit
@@ -41,13 +40,15 @@ source venv/bin/activate
 pip install -r requirements.txt
 python app.py
 
-Swagger UI
+**Swagger UI**
+
 Доступен по адресу:
 http://localhost:5000/apidocs
 
 
 
-Как писать код
+**Как писать код**
+
 Контроллер — только получает запрос и вызывает сервис
 
 Вся логика (валидация, сохранение, хеширование, токены) — в сервисах
