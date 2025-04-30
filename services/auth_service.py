@@ -20,7 +20,7 @@ class AuthService:
     def login(email: str, password: str):
         user = User.query.filter_by(email=email).first()
         if user and bcrypt.check_password_hash(user.password_hash, password):
-            token = create_access_token(identity=user.id)
+            token = create_access_token(identity=str(user.id))
             return token, None
         return None, 'Invalid email or password.'
 
